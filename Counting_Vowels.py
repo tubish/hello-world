@@ -35,3 +35,21 @@ print(r)    # => {'a': 1, 'e': 2, 'o': 1}
 
 
 print(vowel_count2('Awesome'))
+
+
+def counter(my_str):
+    vowels = 'aeuoi'
+    l1 = []
+    l2 = []
+    my_str = my_str.lower()
+    for record in my_str:
+        if record in vowels:
+            l1.append(1) #not to count same letters more than once
+        else:
+            l2.append(1)
+    return sum(l1), sum(l2)
+
+
+print(counter('Beautiful'))
+
+
